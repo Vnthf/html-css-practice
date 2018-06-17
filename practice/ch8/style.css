@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+html, body {
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Montserrat',  'Nanum Gothic', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+}
+
+main {
+    display: flex;
+}
+
+nav {
+    width: 200px;
+    height: auto;
+    background: #484848;
+    flex: none;
+    padding: 20px 0;
+}
+
+section {
+    background: #eee;
+    flex: 1;
+}
+
+footer {
+    height: 30px;
+    width: 100%;
+    text-align: right;
+    padding: 0 10px;
+    line-height: 30px;
+}
+
+header .logo {
+    margin-left: 30px;
+    margin-top: 17px;
+    display: inline-block;
+}
+
+.gnb {
+    margin: 0;
+    padding: 0 30px;
+    list-style: none;
+}
+
+.gnb a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 8px 0;
+    display: block;
+}
+
+.gnb a:hover {
+    color: skyblue;
+}
+
+article {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    width: 20%;
+    height: 250px;
+}
+
+article .title {
+    font-size: 30px;
+}
+
+article.txt {
+    padding: 30px;
+}
+
+article.bg {
+    background-size: cover;
+}
+
+article.bg span {
+    font-size: 60px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    opacity: 0;
+    color: #fff;
+}
+
+article.bg:hover span {
+    opacity: 1;
+}
+
+article:nth-child(1) {
+    background-image: url(../../imgs/payco.png);
+    width: 60%;
+    height: 500px;
+}
+
+article:nth-child(1) span {
+    font-size: 130px;
+    bottom: -40px;
+    color: #aaa;
+}
+
+article:nth-child(1):hover span {
+    color: #fa2828;
+    text-shadow: #fff 1px 0 10px;   
+}
+
+article:nth-child(2) {
+    width: 40%;
+}
+
+article:nth-child(2):hover {
+    color: #fff;
+    background-color: #fa2828;
+}
+
+article:nth-child(3) {
+    width: 40%;
+    background-image: url(../../imgs/nhnent.jpg);
+}
+
+article:nth-child(4):hover,
+article:nth-child(6):hover {
+    color: #fff;
+    background-color: #475f8c;
+}
+
+article:nth-child(5) {
+    background-image: url(../../imgs/dooray.png);
+}
+
+article:nth-child(6) {
+    width: 40%;
+}
+
+article:nth-child(7) {
+    background-image: url(../../imgs/toastcloud.jpg);
+}
+
+article:nth-child(8) {
+    background-image: url(../../imgs/bugs.jpg);
+    width: 60%;
+}
+
+article:nth-child(9) {
+    background-image: url(../../imgs/ticket.png);
+}
+
+article:nth-child(10):hover {
+    color: #fff;
+    background-color: #475f8c;
+}
+
+
+@media screen and (min-width:800px) and (max-width:1279px) { 
+    main {
+        display: block;
+    }
+
+    nav,
+    section {
+        width: 100%;
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
+    .gnb:after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+
+    .gnb li {
+        float: left;
+    }
+
+    .gnb a {
+        padding: 0 30px;
+    }
+
+    article {
+        width: 50%;
+    }
+
+    article:nth-child(1) {
+        width: 100%;
+    }
+
+    article:nth-child(2) {
+        width: 50%;
+    }
+
+    article:nth-child(3) {
+        width: 50%;
+    }
+
+    article:nth-child(4) {
+        display: none;
+    }
+    
+    article:nth-child(5) {
+        width: 50%;
+    }
+
+    article:nth-child(6) {
+        width: 50%;
+    }
+
+    article:nth-child(7) {
+        width: 50%;
+    }
+
+    article:nth-child(8) {
+        width: 50%;
+    }
+
+    article:nth-child(10) {
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width:799px) {  
+
+    nav {
+        display: none;
+    }
+
+    article {
+        width: 100%;
+        height: 100px;
+    }
+
+    article:nth-child(1) {
+        width: 100%;
+        height: 200px;
+    }
+
+    article:nth-child(1) span {
+        bottom: 0;
+    }
+
+    article.txt {
+        display: none;
+    }
+
+    article.bg {
+        width: 100%;
+    }
+
+    article.bg span {
+        opacity: 1;
+        font-size: 40px;
+    }
+}
